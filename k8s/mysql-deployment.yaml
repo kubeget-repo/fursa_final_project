@@ -1,0 +1,33 @@
+#mysql service
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  type: ClusterIP
+  selector:
+    app: mysql
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+---
+
+#mysql Deployment
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+spec:
+  containers:
+  - name: mysql
+    image:  mysql:5.7
+    ports:
+    - containerPort: 3306
+    env:
+    - name: MYSQL_DATABASE
+      value: "mydb"
+    - name: MYSQL_ROOT_PASSWORD
+      value: "root"

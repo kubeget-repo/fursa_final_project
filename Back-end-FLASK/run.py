@@ -9,7 +9,7 @@ api_url='http://data.fixer.io/api/'
 api_key='access_key=d451b7e4294ef3a882f30badd546f344'
 
 mydb = mysql.connector.connect(
-  host= os.environ.get('mysql'),
+  host= "mysql",
   user="root",
   password="root",
   database="mydb"

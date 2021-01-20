@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'git pull https://github.com/shadifadila2018/fursa_final_project.git'
+                sh 'sudo docker build ./Back-end-FLASK/ -t backend:v1'
+                sh 'sudo docker build ./Front-end-FLASK/ -t frontend:v1'
+                sh 'sudo docker run -p 3306:3306  --name some-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=mydb  -d mysql:5.7'
+                sh 'export backendip=0.0.0.0'
+                sh 'export mysql=0.0.0.0'
+                sh 'sudo docker run -p 5000:5000 -d backend:v1'
+                sh 'sudo docker run -p 5001:5001 -d frontend:v1'
+            }
+        }
+    }
+}
