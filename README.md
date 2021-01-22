@@ -19,12 +19,11 @@ Calculate live currency and foreign exchange rates with this free currency conve
         will remove and clean everything 
 
     2. **via Docker** 
-        `sudo docker-compose -f docker-compose.yaml up `
-        
-        using this command will start 3 containers : 
-        1. mysql 
-        2. backend
-        3. frontend 
+    `sudo docker-compose -f docker-compose.yaml up `
+    using this command will start 3 containers : 
+    1. mysql 
+    2. backend
+    3. frontend 
         
         you access the system using this link : http://localhost:81/
 
