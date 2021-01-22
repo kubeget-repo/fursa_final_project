@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  mysql:
+    image:  mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE="mydb"
+      - MYSQL_ROOT_PASSWORD="root"
+  backend:
+    image: shadifadila/my_repo:backend
+    ports:
+      - "5000:5000"
+    links:
+      - mysql
+  frontend:
+    image: shadifadila/my_repo:frontend
+    ports:
+      - "5001:5001"
+    links:
+      - backend
