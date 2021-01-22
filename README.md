@@ -10,7 +10,7 @@ Calculate live currency and foreign exchange rates with this free currency conve
         ![GitHub Logo](/ScreenShots/log.png)
     
 * ## How to Run 
-    1. via Terraform (Run on AWS)
+    1. **via Terraform (Run on AWS)**
         `Terraform apply -auto-approve`
          using this command will start an  EC2 instanse and run all system (Currency converter )
          you can access the website using the ip of the ec2 and the port 81 
@@ -18,7 +18,7 @@ Calculate live currency and foreign exchange rates with this free currency conve
         `Terraform destroy -auto-approve` 
         will remove and clean everything 
 
-    2. via Docker 
+    2. **via Docker** 
         `sudo docker-compose -f docker-compose.yaml up `
         
         using this command will start 3 containers : 
@@ -28,7 +28,7 @@ Calculate live currency and foreign exchange rates with this free currency conve
         
         you access the system using this link : http://localhost:81/
 
-    3. via Kubernetes (k8s)
+    3. **via Kubernetes (k8s)**
         `kubelet apply -f ./k8s` 
         1. backend-deployment.yaml 
         2. frontend-deployment.yaml 
