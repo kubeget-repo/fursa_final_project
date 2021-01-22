@@ -5,17 +5,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'git clone https://github.com/shadifadila2018/fursa_final_project.git || exit 0'
-                sh 'sudo docker build ./fursa_final_project/Back-end-FLASK/ -t shadifadila/my_repo:backend'
-                sh 'sudo docker build ./fursa_final_project/Front-end-FLASK/ -t shadifadila/my_repo:frontend'
-                sh 'sudo docker login -u shadifadila -p 0538241788@@'
-                sh 'sudo docker push shadifadila/my_repo:backend'
-                sh 'sudo docker push shadifadila/my_repo:frontend'
-
-                /*sh 'sudo docker run -p 3306:3306  --name some-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=mydb  -d mysql:5.7'
-                sh 'export backendip=0.0.0.0'
-                sh 'export mysql=0.0.0.0'
-                sh 'sudo docker run -p 5000:5000 -d backend:v1'
-                sh 'sudo docker run -p 5001:5001 -d frontend:v1'*/
+                sh 'sudo docker build ./fursa_final_project/Back-end-FLASK/ -t shadifadila/my_repo:backend' //Rebuild the images
+                sh 'sudo docker build ./fursa_final_project/Front-end-FLASK/ -t shadifadila/my_repo:frontend' //Rebuild the images
+                sh 'sudo docker push shadifadila/my_repo:backend' //Push to repo
+                sh 'sudo docker push shadifadila/my_repo:frontend' //Push to repo
+                sh 'sudo docker-compose -f ./fursa_final_project/docker-compose.yaml up' //Run
             }
         }
     }

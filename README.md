@@ -19,11 +19,12 @@ Calculate live currency and foreign exchange rates with this free currency conve
         will remove and clean everything 
 
     2. **via Docker** 
-    `sudo docker-compose -f docker-compose.yaml up `
-    using this command will start 3 containers : 
-    1. mysql 
-    2. backend
-    3. frontend 
+        `sudo docker-compose -f docker-compose.yaml up `
+        
+        using this command will start 3 containers : 
+        1. mysql 
+        2. backend
+        3. frontend 
         
         you access the system using this link : http://localhost:81/
 
@@ -32,5 +33,23 @@ Calculate live currency and foreign exchange rates with this free currency conve
         1. backend-deployment.yaml 
         2. frontend-deployment.yaml 
         3. mysql-deployment.yaml
+
+    4. **Jenkins**
+    Pipeline 
+        `
+        pipeline {
+        agent any
+            stages {
+                stage('Build') {
+                    steps {
+                        sh 'git clone https://github.com/shadifadila2018/fursa_final_project.git || exit 0'
+                        sh 'sudo docker-compose -f ./fursa_final_project/docker-compose.yaml up'
+                        }
+                }
+            }
+        }
+        `
+    
+
 
 
