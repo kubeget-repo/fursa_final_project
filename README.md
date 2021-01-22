@@ -37,33 +37,30 @@ Calculate live currency and foreign exchange rates with this free currency conve
         2. frontend-deployment.yaml 
         3. mysql-deployment.yaml
 
-    4. **Jenkins**
+    4. **Jenkins** 
+        `pipeline {
 
-    Pipeline 
-        `
-        pipeline {
+            agent any
 
-        agent any
+                stages {
 
-            stages {
+                    stage('Build') {
 
-                stage('Build') {
+                        steps {
 
-                    steps {
+                            sh 'git clone https://github.com/shadifadila2018/fursa_final_project.git || exit 0'
 
-                        sh 'git clone https://github.com/shadifadila2018/fursa_final_project.git || exit 0'
+                            sh 'sudo docker-compose -f ./fursa_final_project/docker-compose.yaml up'
 
-                        sh 'sudo docker-compose -f ./fursa_final_project/docker-compose.yaml up'
+                            }
 
-                        }
+                    }
 
                 }
 
-            }
+         }`
 
-        }
         
-        `
     
 
 
