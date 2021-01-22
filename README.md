@@ -65,7 +65,7 @@ Calculate live currency and foreign exchange rates with this free currency conve
 
    * Diagram : 
 
-    ![GitHub Logo](/ScreenShots/homepage.png)
+    ![GitHub Logo](/ScreenShots/d.png)
 
     * FrontEnd : 
 
