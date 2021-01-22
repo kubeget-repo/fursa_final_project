@@ -29,9 +29,9 @@ Calculate live currency and foreign exchange rates with this free currency conve
         you access the system using this link : http://localhost:81/
 
     3. via Kubernetes (k8s)
-        `kubelet apply -f ./k8s`
-            * backend-deployment.yaml
-            * frontend-deployment.yaml
+        `kubelet apply -f ./k8s` \n
+            * backend-deployment.yaml \n
+            * frontend-deployment.yaml \n
             * mysql-deployment.yaml
 
 
