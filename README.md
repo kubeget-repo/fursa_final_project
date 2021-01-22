@@ -70,6 +70,16 @@ Calculate live currency and foreign exchange rates with this free currency conve
     * FrontEnd : 
 
         Flask-API Communicate with backend over port : 5000
+    
+    * BackEnd : 
+
+        Flask-API Communicate with mysql over port : 3306
+
+    * MySQL : 
+
+        * user : root 
+        * password: root 
+        * db-name : mydb
 
 
         
