@@ -38,7 +38,7 @@ Calculate live currency and foreign exchange rates with this free currency conve
         3. mysql-deployment.yaml
 
     4. **Jenkins** 
-    
+
         pipeline {
 
             agent any
@@ -60,6 +60,17 @@ Calculate live currency and foreign exchange rates with this free currency conve
                 }
 
          }
+
+* ## Micro-Services architicture :
+
+   * Diagram : 
+
+    ![GitHub Logo](/ScreenShots/homepage.png)
+
+    * FrontEnd : 
+
+        Flask-API Communicate with backend over port : 5000
+
 
         
     
