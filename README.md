@@ -1,15 +1,15 @@
 # Fursa Final Project ( Currency converter )
-## About 
+#### About 
 Calculate live currency and foreign exchange rates with this free currency converter. You can convert currencies and precious metals with this currency calculator.
 
-* Usage 
+### Usage 
     *   access the main-page of the website : http://server-ip:81/
         ![GitHub Logo](/ScreenShots/homepage.png)
 
     *   access the log-page  : http://server-ip:81/log
         ![GitHub Logo](/ScreenShots/log.png)
     
-* How to Run 
+### How to Run 
     1. via Terraform (Run on AWS)
         `Terraform apply -auto-approve`
          using this command will start an  EC2 instanse and run all system (Currency converter )
@@ -30,8 +30,8 @@ Calculate live currency and foreign exchange rates with this free currency conve
 
     3. via Kubernetes (k8s)
         `kubelet apply -f ./k8s`
-            - backend-deployment.yaml
-            - frontend-deployment.yaml
-            - mysql-deployment.yaml
+            * backend-deployment.yaml
+            * frontend-deployment.yaml
+            * mysql-deployment.yaml
 
 
